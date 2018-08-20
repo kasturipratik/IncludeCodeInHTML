@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Learning JDBC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-
 
 </div>
 <div class="container bg-light">
@@ -19,7 +23,7 @@
             <h4 class="text-center p-4">Steps for connecting your Java application the database</h4>
             <ul>
                 <!--start of the list of steps-->
-                <li class="list-group-item mt-2">
+                <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
                         <div class="col-sm-12 col-md-9">Download and install
                             <a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank">
@@ -32,7 +36,7 @@
                 </li>
                 <img src="image/intellij.PNG" alt="intellij" class="img-responsive img-fluid" id="intellijImg" style="display:none"/>
 <!--image of intellij download --------------------------------------------------------------------------->
-                <li class="list-group-item mt-2">
+                <li class="list-group-item mt-2 list-group-item-secondary">
                     <div class="row">
                         <div class="col-sm-12 col-md-9">Download and install
                              <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank">JDBC MySql Connector</a>
@@ -45,7 +49,7 @@
                 </li>
                 <img id="mysqlImg" src="image/mysqlConnector.PNG" alt="Mysql Connector" class="img-responsive img-fluid" style="display:none" />
 <!--image of mysql connector ------------------------------------------------------------------------------>
-                <li class="list-group-item mt-2">
+                <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
                         <div class="col-sm-12 col-md-9">Download and install
                             <a href="https://dev.mysql.com/downloads/installer/" target="_blank"> Mysql workBench or MySql
@@ -60,7 +64,28 @@
                 </li>
                 <img src="image/mysqlWorkbench.PNG" alt="intellij" class="img-responsive img-fluid" id="workBenchImg" style="display:none"/>
 <!--image of mysql work benchdown load------------------------------------------------------------------------->
-                <li class="list-group-item mt-2">
+
+                <li class="list-group-item mt-2 list-group-item-secondary">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9"> Open Intellij IDE and create new project.
+                            <ul>
+                                <li>Click Java Enterprise</li>
+                                <li>Select the tomcat server you downloaded</li>
+                                <li>Navigate to the Additional Libraries and Frameworks and select web application</li>
+                                <li>Click next and give your project a name and click finish</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                             <span id="tomcat" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                                       Show Image
+                             </span>
+                        </div>
+                    </div>
+                </li>
+                <img src="image/createProject.PNG" alt="intellij" class="img-responsive img-fluid" id="tomcatImg" style="display:none"/>
+
+<!--image of tomcat server installation----------------------------------------------------------------------------->
+                <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
                         <div class="col-sm-12 col-md-9"> Open Intellij IDE and create new project.
                             <ul>
@@ -106,6 +131,9 @@
         }
         else if(idName === "mysqlWorkBench"){
             theDiv = document.getElementById("workBenchImg");
+        }
+        else if(idName === "tomcat"){
+            theDiv = document.getElementById("tomcatImg");
         }
         else if(idName === "project"){
             theDiv = document.getElementById("projectImg");
