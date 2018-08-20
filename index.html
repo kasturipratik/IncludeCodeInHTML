@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Learning JDBC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -16,21 +17,21 @@
 
 </div>
 <div class="container bg-light">
-    <h2 class="text-center">Connecting Database to your Java Application (JDBC)</h2>
+    <h2 class="text-center text-success mt-2">Connecting Database to your Java Application (JDBC)</h2>
     <div class="row">
-        <div class="col-sm-0 col-md-2">&nbsp;</div>
-        <div class="col-sm-12 col-md-8">
+        <div class="col-sm-0 col-md-1"></div>
+        <div class="col-sm-12 col-md-10">
             <h4 class="text-center p-4">Steps for connecting your Java application the database</h4>
             <ul>
                 <!--start of the list of steps-->
                 <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
-                        <div class="col-sm-12 col-md-9">Download and install
+                        <div class="col-sm-12 col-md-8 col-lg-9">Download and install
                             <a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank">
                                 Intellij Ultimate IDE</a>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                            <span id="intellij" onclick="returnId()" class="btn btn-sm btn-warning ml-5  font-weight-bold text-secondary">Show Image</span>
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <span id="intellij" onclick="returnId()" class="btn btn-sm btn-warning mt-2 font-weight-bold text-secondary">Show Image</span>
                         </div>
                     </div>
                 </li>
@@ -38,12 +39,12 @@
 <!--image of intellij download --------------------------------------------------------------------------->
                 <li class="list-group-item mt-2 list-group-item-secondary">
                     <div class="row">
-                        <div class="col-sm-12 col-md-9">Download and install
+                        <div class="col-sm-12 col-md-8 col-lg-9">Download and install
                              <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank">JDBC MySql Connector</a>
                             for your Operating System or any connector applicable to you.
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                            <span id="mysqlCon" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">Show Image</span>
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <span id="mysqlCon" onclick="returnId()" class="btn btn-sm btn-warning  mt-2 font-weight-bold text-secondary">Show Image</span>
                         </div>
                     </div>
                 </li>
@@ -51,12 +52,12 @@
 <!--image of mysql connector ------------------------------------------------------------------------------>
                 <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
-                        <div class="col-sm-12 col-md-9">Download and install
+                        <div class="col-sm-12 col-md-8 col-lg-9">Download and install
                             <a href="https://dev.mysql.com/downloads/installer/" target="_blank"> Mysql workBench or MySql
                                 Installer</a>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                              <span id="mysqlWorkBench" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                              <span id="mysqlWorkBench" onclick="returnId()" class="btn btn-sm btn-warning  mt-2 font-weight-bold text-secondary">
                                   Show Image
                               </span>
                         </div>
@@ -67,7 +68,7 @@
 
                 <li class="list-group-item mt-2 list-group-item-secondary">
                     <div class="row">
-                        <div class="col-sm-12 col-md-9"> Open Intellij IDE and create new project.
+                        <div class="col-sm-12 col-md-8 col-lg-9"> Open Intellij IDE and create new project.
                             <ul>
                                 <li>Click Java Enterprise</li>
                                 <li>Select the tomcat server you downloaded</li>
@@ -75,8 +76,8 @@
                                 <li>Click next and give your project a name and click finish</li>
                             </ul>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                             <span id="tomcat" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                             <span id="tomcat" onclick="returnId()" class="btn btn-sm btn-warning  mt-2 font-weight-bold text-secondary">
                                        Show Image
                              </span>
                         </div>
@@ -87,7 +88,7 @@
 <!--image of tomcat server installation----------------------------------------------------------------------------->
                 <li class="list-group-item mt-2 list-group-item-info">
                     <div class="row">
-                        <div class="col-sm-12 col-md-9"> Open Intellij IDE and create new project.
+                        <div class="col-sm-12 col-md-8 col-lg-9"> Open Intellij IDE and create new project.
                             <ul>
                                 <li>Click Java Enterprise</li>
                                 <li>Select the tomcat server you downloaded</li>
@@ -95,8 +96,8 @@
                                 <li>Click next and give your project a name and click finish</li>
                             </ul>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                             <span id="project" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                             <span id="project" onclick="returnId()" class="btn btn-sm btn-warning  mt-2 font-weight-bold text-secondary">
                                        Show Image
                              </span>
                         </div>
@@ -112,7 +113,7 @@
                 <li class="list-group-item mt-2"></li>
             </ul>
         </div>
-        <div class="col-sm-0 col-md-2">&nbsp;</div>
+        <div class="col-sm-0 col-md-1">&nbsp;</div>
     </div>
 </div>
 
