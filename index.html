@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JDBC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+
+
+</div>
+<div class="container bg-light">
+    <h2 class="text-center">Connecting Database to your Java Application (JDBC)</h2>
+    <div class="row">
+        <div class="col-sm-0 col-md-2">&nbsp;</div>
+        <div class="col-sm-12 col-md-8">
+            <h4 class="text-center p-4">Steps for connecting your Java application the database</h4>
+            <ul>
+                <!--start of the list of steps-->
+                <li class="list-group-item mt-2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9">Download and install
+                            <a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank">
+                                Intellij Ultimate IDE</a>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <span id="intellij" onclick="returnId()" class="btn btn-sm btn-warning ml-5  font-weight-bold text-secondary">Show Image</span>
+                        </div>
+                    </div>
+                </li>
+                <img src="image/intellij.PNG" alt="intellij" class="img-responsive img-fluid" id="intellijImg" style="display:none"/>
+<!--image of intellij download --------------------------------------------------------------------------->
+                <li class="list-group-item mt-2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9">Download and install
+                             <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank">JDBC MySql Connector</a>
+                            for your Operating System or any connector applicable to you.
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <span id="mysqlCon" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">Show Image</span>
+                        </div>
+                    </div>
+                </li>
+                <img id="mysqlImg" src="image/mysqlConnector.PNG" alt="Mysql Connector" class="img-responsive img-fluid" style="display:none" />
+<!--image of mysql connector ------------------------------------------------------------------------------>
+                <li class="list-group-item mt-2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9">Download and install
+                            <a href="https://dev.mysql.com/downloads/installer/" target="_blank"> Mysql workBench or MySql
+                                Installer</a>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                              <span id="mysqlWorkBench" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                                  Show Image
+                              </span>
+                        </div>
+                    </div>
+                </li>
+                <img src="image/mysqlWorkbench.PNG" alt="intellij" class="img-responsive img-fluid" id="workBenchImg" style="display:none"/>
+<!--image of mysql work benchdown load------------------------------------------------------------------------->
+                <li class="list-group-item mt-2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-9"> Open Intellij IDE and create new project.
+                            <ul>
+                                <li>Click Java Enterprise</li>
+                                <li>Select the tomcat server you downloaded</li>
+                                <li>Navigate to the Additional Libraries and Frameworks and select web application</li>
+                                <li>Click next and give your project a name and click finish</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                             <span id="project" onclick="returnId()" class="btn btn-sm btn-warning ml-5 font-weight-bold text-secondary">
+                                       Show Image
+                             </span>
+                        </div>
+                    </div>
+                </li>
+                <img src="image/createProject.PNG" alt="intellij" class="img-responsive img-fluid" id="projectImg" style="display:none"/>
+<!--image of project creation---------------------------------------------------------------------------------------->
+                <li class="list-group-item mt-2"></li>
+                <li class="list-group-item mt-2"></li>
+                <li class="list-group-item mt-2"></li>
+                <li class="list-group-item mt-2"></li>
+                <li class="list-group-item mt-2"></li>
+                <li class="list-group-item mt-2"></li>
+            </ul>
+        </div>
+        <div class="col-sm-0 col-md-2">&nbsp;</div>
+    </div>
+</div>
+
+
+<script>
+
+
+    function returnId() {
+        var idName = event.srcElement.id;
+        var theDiv ="";
+        if(idName === "intellij") {
+            theDiv = document.getElementById("intellijImg");
+        }
+        else if(idName === "mysqlCon"){
+            theDiv = document.getElementById("mysqlImg");
+        }
+        else if(idName === "mysqlWorkBench"){
+            theDiv = document.getElementById("workBenchImg");
+        }
+        else if(idName === "project"){
+            theDiv = document.getElementById("projectImg");
+        }
+        /*condition to change theDiv*/
+        if(theDiv.style.display == 'none') {
+            theDiv.style.display = 'block';
+            document.getElementById(idName).innerHTML = 'Hide Image';
+        } else {
+            theDiv.style.display = 'none';
+            document.getElementById(idName).innerHTML = 'Show Image';
+        }
+    }
+
+
+</script>
+</body>
+</html>
